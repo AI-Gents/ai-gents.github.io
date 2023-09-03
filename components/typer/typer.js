@@ -6,11 +6,12 @@ export const Typer = () => {
   const el = useRef(null);
 
   const slogans = [
-    "become exploits.",
-    "endanger your data.",
-    "compromise your code.",
-    "turn into threats.",
+    "get to production!",
     "find you!",
+    "are exploited!",
+    "endanger your data!",
+    "it's too late!",
+    "turn into threats!",
   ];
 
   useEffect(() => {
