@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
                 Naxus safeguards your code from vulnerabilities, so you can
-                focus on building exceptional software. Don`&apos;`t let any
+                focus on building exceptional software. Don&apos;t let any
                 vulnerability reach production!
               </FallInPlace>
             }
@@ -199,11 +199,11 @@ const HighlightsSection = () => {
           title="An EDR for your Source Code "
         >
           <Text color="muted" fontSize="lg">
-            When you grab our organization`&apos;`s package, think of it as getting an
+            When you grab our organization&apos;s package, think of it as getting an
             extra set of eyes—actually, make that a whole team of eyes. Our
             cybersecurity crew will dive deep into every alert, giving it a good
             look-over. No more getting bogged down by those pesky false alarms.
-            We`&apos;`ll clear out the noise so you can focus on making your code
+            We&apos;ll clear out the noise so you can focus on making your code
             shine.
           </Text>
         </HighlightsItem>
@@ -249,7 +249,7 @@ const FeaturesSection = () => {
       description={
         <>
           Elevate your code security practices and streamline your development
-          workflow to meet the demands of today`&apos;`s software development
+          workflow to meet the demands of today&apos;s software development
           landscape.
         </>
       }
@@ -268,7 +268,7 @@ const FeaturesSection = () => {
         //   title: "Custom alerts.",
         //   icon: FiLock,
         //   description:
-        //     "Tailor alerts to your team`&apos;`s specific needs, ensuring that you`&apos;`re only notified about the vulnerabilities that matter most.",
+        //     "Tailor alerts to your team&apos;s specific needs, ensuring that you&apos;re only notified about the vulnerabilities that matter most.",
         //   variant: "inline",
         // },
         {

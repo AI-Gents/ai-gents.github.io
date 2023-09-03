@@ -34,7 +34,7 @@ export default {
       id: "startup",
       title: "Startup",
       description: "Flexible monitoring license for growing teams.",
-      price: "$29.99/mo",
+      price: "29.99€/mo",
       isRecommended: true,
       features: [
         {
