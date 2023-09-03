@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { transparentize } from "@chakra-ui/theme-tools";
 import { Section, SectionProps } from "components/section";
-import { Testimonial, TestimonialProps } from "components/testimonials";
 
 export interface HighlightBoxProps
   extends GridItemProps,
@@ -45,12 +44,9 @@ export const HighlightsItem: React.FC<HighlightBoxProps> = (props) => {
 };
 
 export const HighlightsTestimonialItem: React.FC<
-  HighlightBoxProps & TestimonialProps & { gradient: [string, string] }
+  HighlightBoxProps & { gradient: [string, string] }
 > = (props) => {
   const {
-    name,
-    description,
-    avatar,
     children,
     gradient = ["primary.500", "secondary.500"],
     ...rest
@@ -75,22 +71,8 @@ export const HighlightsTestimonialItem: React.FC<
         zIndex="0"
         _dark={{ opacity: 0.5, filter: "blur(50px)" }}
       />
-      <Testimonial
-        name={name}
-        description={
-          <Box as="span" color="whiteAlpha.700">
-            {description}
-          </Box>
-        }
-        avatar={avatar}
-        border="0"
-        bg="transparent"
-        boxShadow="none"
-        color="white"
-        position="relative"
-      >
-        {children}
-      </Testimonial>
+
+      {children}
     </HighlightsItem>
   );
 };

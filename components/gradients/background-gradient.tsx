@@ -3,19 +3,19 @@ import { Box, useTheme, useColorModeValue } from '@chakra-ui/react'
 export const BackgroundGradient = ({ hideOverlay, ...props }: any) => {
   const theme = useTheme()
   const colors = [
-    theme.colors.primary['800'],
-    theme.colors.secondary['500'],
-    theme.colors.cyan['500'],
-    theme.colors.teal['500'],
+    theme.colors.blue['700'],
+    theme.colors.indigo['700'],
+    theme.colors.cyan['700'],
+    theme.colors.indigo['700'],
   ]
 
-  let fallbackBackground = `radial-gradient(at top left, ${colors[0]} 30%, transparent 80%), radial-gradient(at bottom, ${colors[1]} 0%, transparent 60%), radial-gradient(at bottom left, var(--chakra-colors-cyan-500) 0%, transparent 50%),
-        radial-gradient(at top right, ${colors[3]}, transparent), radial-gradient(at bottom right, ${colors[0]} 0%, transparent 50%);`
+  let fallbackBackground = `radial-gradient(at top left, ${colors[0]} 10%, transparent 50%), radial-gradient(at bottom, ${colors[1]} 10%, transparent 50%), radial-gradient(at bottom left, var(--chakra-colors-indigo-700) 10%, transparent 50%),
+        radial-gradient(at top right, ${colors[2]} 30%, transparent 50%), radial-gradient(at bottom right, ${colors[0]} 50%, transparent 80%);`
 
   let gradientOverlay = `linear-gradient(0deg, var(--chakra-colors-${useColorModeValue(
     'white',
-    'gray-900'
-  )}) 60%, rgba(0, 0, 0, 0) 100%);`
+    'black'
+  )}) 30%, rgba(0, 0, 0, 0) 50%);`
 
   return (
     <Box

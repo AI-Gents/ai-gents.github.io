@@ -85,10 +85,10 @@ export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = (
                 <BannerTitle fontWeight="semibold" noOfLines={1}>
                   {title}
                 </BannerTitle>
-                <BannerDescription
+                {/* <BannerDescription
                   display={{ base: "none", md: "block" }}
                   dangerouslySetInnerHTML={{ __html: description }}
-                />
+                /> */}
 
                 {action && (
                   <BannerActions>

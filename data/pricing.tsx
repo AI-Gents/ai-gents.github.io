@@ -1,114 +1,102 @@
-import { HStack, Text } from '@chakra-ui/react'
+import { HStack, Text } from "@chakra-ui/react";
 
 export default {
-  title: 'Pricing for every stage',
-  description:
-    'Pay once and get life-time access to our high quality components.',
+  title: "Pricing for every stage",
+  description: null,
   plans: [
     {
-      id: 'oss',
-      title: 'Open Source',
-      description: 'Basic compoents, perfect to get started.',
-      price: 'Free',
+      id: "free",
+      title: "Free",
+      description: "Basic monitoring, perfect to get started.",
+      price: "Free",
       features: [
         {
-          title: 'MIT License',
+          title: "Automated PR analysis",
         },
         {
-          title: 'Authentication (Clerk/Supabase/Magic)',
+          title: "Access to Public Repositories",
         },
         {
-          title: 'Form (react-hook-form)',
+          title: "Basic analysis without context",
         },
         {
-          title: 'Modals manager',
+          title: "Monitor up to 3 repositories",
         },
         {
-          title: 'Hotkeys',
-        },
-        {
-          title: 'Web3 components',
-        },
-        {
-          title: 'And much more...',
+          title: "500 lines of code per month",
         },
       ],
       action: {
-        href: '#',
+        href: "https://dashboard.naxusai.com/auth/login",
       },
     },
     {
-      id: 'bootstrap',
-      title: 'Bootstrap',
-      description: 'Complete frontend stack for bootstrappers and small teams.',
-      price: 'Free',
+      id: "startup",
+      title: "Startup",
+      description: "Flexible monitoring license for growing teams.",
+      price: "$29.99/mo",
       isRecommended: true,
       features: [
         {
-          title: 'One project',
+          title: "Automated PR & commit analysis",
         },
         {
-          title: 'One developer',
+          title: "Access to Public & Private Repos",
         },
         {
-          title: 'Advanced components',
+          title: "In-depth analysis with basic context",
         },
         {
-          title: 'Multiple themes',
+          title: "Monitor up to 10 repositories",
         },
         {
-          title: 'Next.js and Electron boilerplates',
-        },
-        {
-          title: 'Private discord community',
-        },
-        {
-          title: '1 year of updates',
-        },
-        null,
-        {
-          title: 'Private beta access',
-          iconColor: 'green.500',
+          title: "10,000 lines of code per month",
         },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Single%20license',
+        href: "https://dashboard.naxusai.com/auth/login",
       },
     },
     {
-      id: 'startup',
-      title: 'Startup',
-      description: 'Unlimited license for growing teams.',
+      id: "organization",
+      title: "Organization",
+      description: "Our most advanced monitoring solution.",
       price: (
         <HStack>
-          <Text textDecoration="line-through" fontSize="sm" color="gray.400">
+          {/* <Text textDecoration="line-through" fontSize="sm" color="gray.400">
             €999,-
-          </Text>
-          <Text>€499,-</Text>
+          </Text> */}
+          <Text></Text>
         </HStack>
       ),
       features: [
         {
-          title: 'Unlimited projects',
+          title: "Automated PR & commit analysis",
         },
         {
-          title: 'Unlimited developers',
+          title: "Access to Public & Private Repos",
         },
         {
-          title: '1 year of updates',
+          title: "Advanced analysis with full context",
         },
         {
-          title: 'Everything from Bootstrap',
+          title: "Custom Repositories Limit",
+        },
+        {
+          title: "Custom lines of code per month",
+        },
+        {
+          title: "Initial comprehensive code analysis",
+        },
+        {
+          title: "Human monitoring and support",
         },
         null,
-        {
-          title: 'Private beta access',
-          iconColor: 'green.500',
-        },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Unlimited%20license',
+        label: "Contact us",
+        href: "mailto:info@naxusai.com",
       },
     },
   ],
-}
+};
