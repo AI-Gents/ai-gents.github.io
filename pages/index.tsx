@@ -24,7 +24,8 @@ import {
   FiTerminal,
   FiGithub,
   FiTrendingUp,
-  FiUserPlus,
+  FiEye,
+  FiUserCheck,
 } from "react-icons/fi";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
@@ -69,7 +70,7 @@ const HeroSection: React.FC = () => {
           <Hero
             id="home"
             justifyContent="flex-start"
-            px="10"
+            px={{ base: 0, lg: 10 }}
             title={
               <FallInPlace>
                 Find your vulnerabilities, <Br />
@@ -174,7 +175,7 @@ const HighlightsSection = () => {
             </Text>
           </VStack>
         </HighlightsItem>
-        <Box p="0" m="auto">
+        <Box display={{ base: "none", lg: "block" }} p="0" m="auto">
           <Image
             src="/static/images/shield-bot.png"
             width={200}
@@ -184,7 +185,7 @@ const HighlightsSection = () => {
             priority
           />
         </Box>
-        <Box p="0" m="auto">
+        <Box display={{ base: "none", lg: "block" }} p="0" m="auto">
           <Image
             src="/static/images/shield-cero.png"
             width={200}
@@ -199,12 +200,12 @@ const HighlightsSection = () => {
           title="An EDR for your Source Code "
         >
           <Text color="muted" fontSize="lg">
-            When you grab our organization&apos;s package, think of it as getting an
-            extra set of eyes—actually, make that a whole team of eyes. Our
-            cybersecurity crew will dive deep into every alert, giving it a good
-            look-over. No more getting bogged down by those pesky false alarms.
-            We&apos;ll clear out the noise so you can focus on making your code
-            shine.
+            When you grab our organization&apos;s package, think of it as
+            getting an extra set of eyes—actually, make that a whole team of
+            eyes. Our cybersecurity crew will dive deep into every alert, giving
+            it a good look-over. No more getting bogged down by those pesky
+            false alarms. We&apos;ll clear out the noise so you can focus on
+            making your code shine.
           </Text>
         </HighlightsItem>
 
@@ -218,7 +219,7 @@ const HighlightsSection = () => {
             each discovery.
           </Text>
         </HighlightsItem>
-        <Box p="0" m="auto">
+        <Box display={{ base: "none", lg: "block" }} p="0" m="auto">
           <Image
             src="/static/images/shield-person.png"
             width={200}
@@ -280,7 +281,7 @@ const FeaturesSection = () => {
         },
         {
           title: "User-friendly.",
-          icon: FiUserPlus,
+          icon: FiUserCheck,
           description:
             "Features an intuitive, user-friendly interface designed to make vulnerability management accessible to all team members.",
           variant: "inline",
@@ -294,7 +295,7 @@ const FeaturesSection = () => {
         },
         {
           title: "Expert review.",
-          icon: FiTrendingUp,
+          icon: FiEye,
           description:
             "In the organization tier, human experts review code to ensure that high-risk vulnerabilities are thoroughly assessed, without bothering you with false positives.",
           variant: "inline",
