@@ -20,10 +20,10 @@ export default {
           title: "Basic analysis without context",
         },
         {
-          title: "Monitor up to 3 repositories",
+          title: "Monitor up to 5 repositories",
         },
         {
-          title: "500 lines of code per month",
+          title: "2500 lines of code per month",
         },
       ],
       action: {
@@ -34,7 +34,7 @@ export default {
       id: "startup",
       title: "Startup",
       description: "Flexible monitoring license for growing teams.",
-      price: "29.99€/mo",
+      price: "9.99€/mo",
       isRecommended: true,
       features: [
         {
@@ -47,10 +47,10 @@ export default {
           title: "In-depth analysis with basic context",
         },
         {
-          title: "Monitor up to 10 repositories",
+          title: "Monitor up to 25 repositories",
         },
         {
-          title: "10,000 lines of code per month",
+          title: "15,000 lines of code per month",
         },
       ],
       action: {
