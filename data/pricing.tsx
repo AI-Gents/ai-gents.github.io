@@ -34,7 +34,7 @@ export default {
       id: "startup",
       title: "Startup",
       description: "Flexible monitoring license for growing teams.",
-      price: "9.99€/mo",
+      price: "9.99€/month",
       isRecommended: true,
       features: [
         {
@@ -50,7 +50,7 @@ export default {
           title: "Monitor up to 25 repositories",
         },
         {
-          title: "15,000 lines of code per month",
+          title: "15000 lines of code per month",
         },
       ],
       action: {
