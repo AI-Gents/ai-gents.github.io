@@ -23,7 +23,7 @@ export default {
           title: "Monitor up to 5 repositories",
         },
         {
-          title: "2500 lines of code per month",
+          title: "2,500 lines of code per month",
         },
       ],
       action: {
@@ -53,7 +53,7 @@ export default {
           title: "15,000 lines of code monitoring per month",
         },
         {
-          title: "10,000 lines of code audit per month",
+          title: "2,500 lines of code audit per month",
         },
       ],
       action: {
