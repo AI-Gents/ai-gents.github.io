@@ -11,19 +11,25 @@ export default {
       price: "Free",
       features: [
         {
+          title: "Monitor up to 10 repositories",
+        },
+        {
+          title: "Limited repository size",
+        },
+        {
           title: "Automated PR & commit analysis",
         },
         {
           title: "Access to Public & Private Repositories",
         },
         {
+          title: "Repository Graph View",
+        },
+        {
+          title: "Security Analysis requests of specific parts of the code",
+        },
+        {
           title: "Full context Analysis",
-        },
-        {
-          title: "Monitor up to 10 repositories",
-        },
-        {
-          title: "Limited repository size",
         },
         {
           title: "Use your own API keys",
@@ -78,22 +84,31 @@ export default {
       ),
       features: [
         {
+          title: "Unlimited repositories",
+        },
+        {
+          title: "Unlimited repository size",
+        },
+        {
           title: "Automated PR & commit analysis",
         },
         {
           title: "Access to Public & Private Repositories",
         },
         {
+          title: "Repository Graph View",
+        },
+        {
+          title: "Security Analysis requests of specific parts of the code",
+        },
+        {
           title: "Full context Analysis",
         },
         {
-          title: "Unlimited number of repositories",
-        },
-        {
-          title: "Unlimited repository size",
-        },
-        {
           title: "Let us configure the plaform and confirm all the findings",
+        },
+        {
+          title: "Support",
         },
         null,
       ],
