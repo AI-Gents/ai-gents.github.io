@@ -11,26 +11,29 @@ export default {
       price: "Free",
       features: [
         {
-          title: "Automated PR analysis",
+          title: "Automated PR & commit analysis",
         },
         {
-          title: "Access to Public Repositories",
+          title: "Access to Public & Private Repositories",
         },
         {
-          title: "Basic analysis without context",
+          title: "Full context Analysis",
         },
         {
-          title: "Monitor up to 5 repositories",
+          title: "Monitor up to 10 repositories",
         },
         {
-          title: "2,500 lines of code per month",
+          title: "Limited repository size",
+        },
+        {
+          title: "Use your own API keys",
         },
       ],
       action: {
         href: "https://dashboard.naxusai.com/auth/login",
       },
     },
-    {
+    /*{
       id: "startup",
       title: "Startup",
       description: "Flexible monitoring license for growing teams.",
@@ -59,7 +62,7 @@ export default {
       action: {
         href: "https://dashboard.naxusai.com/auth/login",
       },
-    },
+    },*/
     {
       id: "organization",
       title: "Organization",
@@ -77,22 +80,19 @@ export default {
           title: "Automated PR & commit analysis",
         },
         {
-          title: "Access to Public & Private Repos",
+          title: "Access to Public & Private Repositories",
         },
         {
-          title: "Advanced analysis with full context",
+          title: "Full context Analysis",
         },
         {
-          title: "Custom Repositories Limit",
+          title: "Unlimited number of repositories",
         },
         {
-          title: "Custom lines of code per month",
+          title: "Unlimited repository size",
         },
         {
-          title: "Initial comprehensive code analysis",
-        },
-        {
-          title: "Human monitoring and support",
+          title: "Let us configure the plaform and confirm all the findings",
         },
         null,
       ],
