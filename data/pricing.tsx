@@ -67,12 +67,13 @@ export default {
       id: "organization",
       title: "Organization",
       description: "Our most advanced monitoring solution.",
+      isRecommended: true,
       price: (
         <HStack>
           {/* <Text textDecoration="line-through" fontSize="sm" color="gray.400">
             €999,-
           </Text> */}
-          <Text></Text>
+          <Text>Contact Us</Text>
         </HStack>
       ),
       features: [
