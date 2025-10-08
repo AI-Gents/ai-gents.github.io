@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 
         <FeaturesSection />
 
-        <PricingSection />
+        {/* <PricingSection /> */}
 
         {/* <FaqSection /> */}
       </Box>
@@ -146,7 +146,7 @@ const HighlightsSection = () => {
     <div id="features">
       <Flex justifyContent="center" alignItems="center">
         <Container maxW="container.xl">
-          <Text
+          {/* <Text
             as="div"
             py="8"
             textStyle="subtitle"
@@ -155,23 +155,27 @@ const HighlightsSection = () => {
             textAlign="center"
           >
             What is Naxus?
-          </Text>
+          </Text> */}
           <Text fontSize="6xl" fontWeight="bold" textAlign="center">
-            Meet our team of AI-Gents
+            What is Naxus?
           </Text>
         </Container>
       </Flex>
 
       <Highlights>
-        <HighlightsItem colSpan={[1, null, 2]} title="AI at the core ">
+        <HighlightsItem
+          colSpan={[1, null, 2]}
+          title="Automated Vulnerability Lifecycle "
+        >
           <VStack alignItems="flex-start" spacing="8">
             <Text color="muted" fontSize="xl">
-              We diligently oversee each modification in your code repository
-              with real-time precision. AI-Gents is our AI-powered robust
-              monitoring service that ensures that vulnerabilities and potential
-              backdoors are detected in PRs and Commits. Stay informed and
-              proactive, as we promptly alert you to every emerging potential
-              vulnerability in your code.
+              We go beyond simple detection. Naxus automates the entire
+              vulnerability lifecycle, from identification to resolution, with
+              deep insight into exposed assets and proof-of-concept exploits.
+              Our system minimizes false positives by validating real
+              exploitability, while also guiding you with precise remediation
+              suggestions. Stay secure effortlessly as every step of the process
+              is handled with intelligence and precision.
             </Text>
           </VStack>
         </HighlightsItem>
@@ -195,28 +199,25 @@ const HighlightsSection = () => {
             priority
           />
         </Box>
-        <HighlightsItem
-          colSpan={[1, null, 2]}
-          title="An EDR for your Source Code "
-        >
+        <HighlightsItem colSpan={[1, null, 2]} title="Attack Path Discovery ">
           <Text color="muted" fontSize="lg">
-            When you grab our organization&apos;s package, think of it as
-            getting an extra set of eyes—actually, make that a whole team of
-            eyes. Our cybersecurity crew will dive deep into every alert, giving
-            it a good look-over. No more getting bogged down by those pesky
-            false alarms. We&apos;ll clear out the noise so you can focus on
-            making your code shine.
+            See your code’s vulnerabilities the way an attacker would. Naxus
+            maps attack paths across complex code flows and interdependent
+            components, tracing weaknesses through the intricate web of your
+            software. This full-spectrum visibility empowers your team to make
+            proactive, data-driven security decisions before issues become
+            breaches.
           </Text>
         </HighlightsItem>
 
-        <HighlightsItem colSpan={[1, null, 2]} title="Expert AI-Human Synergy ">
+        <HighlightsItem colSpan={[1, null, 2]} title="Context-Aware Detection ">
           <Text color="muted" fontSize="lg">
-            Initiate the process with a seasoned penetration tester meticulously
-            examining your code, complemented by our advanced AI, to uncover
-            existing vulnerabilities. Subsequently, as your code undergoes
-            changes, AI-Gents will continually monitor it. Our human experts,
-            familiar with the nuances of your code, will authenticate and assess
-            each discovery.
+            Not all vulnerabilities are equal. Naxus performs deep contextual
+            analysis of your codebase (understanding relationships, behavior,
+            and intent) to detect sophisticated issues that span multiple files
+            or layers. By reducing false positives and surfacing what truly
+            matters, we make vulnerability detection smarter, faster, and far
+            more effective.
           </Text>
         </HighlightsItem>
         <Box display={{ base: "none", lg: "block" }} p="0" m="auto">
@@ -294,10 +295,10 @@ const FeaturesSection = () => {
           variant: "inline",
         },
         {
-          title: "Expert review.",
+          title: "Agent-ready.",
           icon: FiEye,
           description:
-            "In the organization tier, human experts review code to ensure that high-risk vulnerabilities are thoroughly assessed, without bothering you with false positives.",
+            "Autonomous AI agents independently verify detected vulnerabilities, validating exploitability and prioritizing real risks with precision, so your team stays focused without the noise of false positives.",
           variant: "inline",
         },
 

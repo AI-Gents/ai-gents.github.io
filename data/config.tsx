@@ -19,10 +19,10 @@ const siteConfig = {
         id: "features",
         label: "Features",
       },
-      {
-        id: "pricing",
-        label: "Pricing",
-      },
+      // {
+      //   id: "pricing",
+      //   label: "Pricing",
+      // },
       // {
       //   id: "faq",
       //   label: "FAQ",
