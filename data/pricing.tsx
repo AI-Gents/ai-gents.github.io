@@ -2,120 +2,97 @@ import { HStack, Text } from "@chakra-ui/react";
 
 export default {
   title: "Pricing for every stage",
-  description: null,
+  description:
+    "From free scans with your own keys, to fully managed plans, to pay-per-vulnerability — pick what fits your workflow.",
   plans: [
     {
       id: "free",
       title: "Free",
-      description: "Basic monitoring, perfect to get started.",
+      description: "Get started with your own API keys.",
       price: "Free",
       features: [
         {
-          title: "Monitor up to 10 repositories",
-        },
-        {
-          title: "Limited repository size",
-        },
-        {
-          title: "Automated PR & commit analysis",
-        },
-        {
-          title: "Access to Public & Private Repositories",
-        },
-        {
-          title: "Repository Graph View",
-        },
-        {
-          title: "Security Analysis requests of specific parts of the code",
-        },
-        {
-          title: "Full context Analysis",
+          title: "5 security scans (total)",
         },
         {
           title: "Use your own API keys",
         },
+        {
+          title: "Monitor up to 5 repositories",
+        },
+        {
+          title: "Access to Public Repos only",
+        },
       ],
       action: {
         href: "https://dashboard.naxusai.com/auth/login",
       },
     },
-    /*{
-      id: "startup",
-      title: "Startup",
-      description: "Flexible monitoring license for growing teams.",
-      price: "9.99€/month",
-      isRecommended: true,
-      features: [
-        {
-          title: "Automated PR & commit analysis",
-        },
-        {
-          title: "Access to Public & Private Repos",
-        },
-        {
-          title: "In-depth analysis with basic context",
-        },
-        {
-          title: "Monitor up to 25 repositories",
-        },
-        {
-          title: "15,000 lines of code monitoring per month",
-        },
-        {
-          title: "2,500 lines of code audit per month",
-        },
-      ],
-      action: {
-        href: "https://dashboard.naxusai.com/auth/login",
-      },
-    },*/
     {
-      id: "organization",
-      title: "Organization",
-      description: "Our most advanced monitoring solution.",
+      id: "pro",
+      title: "Pro",
+      description: "Full-featured scanning with your own keys.",
+      price: "49€/month",
       isRecommended: true,
-      price: (
-        <HStack>
-          {/* <Text textDecoration="line-through" fontSize="sm" color="gray.400">
-            €999,-
-          </Text> */}
-          <Text>Contact Us</Text>
-        </HStack>
-      ),
       features: [
         {
-          title: "Unlimited repositories",
+          title: "100 scans per month",
         },
         {
-          title: "Unlimited repository size",
+          title: "Use your own API keys",
         },
         {
-          title: "Automated PR & commit analysis",
+          title: "Monitor up to 50 repositories",
         },
         {
-          title: "Access to Public & Private Repositories",
+          title: "Public & Private Repos",
         },
         {
           title: "Repository Graph View",
         },
         {
-          title: "Security Analysis requests of specific parts of the code",
+          title: "PR & commit monitoring",
         },
         {
-          title: "Full context Analysis",
+          title: "Full context analysis",
         },
-        {
-          title: "Let us configure the plaform and confirm all the findings",
-        },
-        {
-          title: "Support",
-        },
-        null,
       ],
       action: {
-        label: "Contact us",
-        href: "mailto:info@naxusai.com",
+        href: "https://dashboard.naxusai.com/auth/login",
+      },
+    },
+    {
+      id: "pro_full",
+      title: "Pro Full",
+      description: "Zero config — we provide the API keys.",
+      price: "119€/month",
+      features: [
+        {
+          title: "30 scans per month",
+        },
+        {
+          title: "No API keys needed",
+        },
+        {
+          title: "Zero configuration required",
+        },
+        {
+          title: "Monitor up to 30 repositories",
+        },
+        {
+          title: "Public & Private Repos",
+        },
+        {
+          title: "Repository Graph View",
+        },
+        {
+          title: "PR & commit monitoring",
+        },
+      ],
+      action: {
+        href: "https://dashboard.naxusai.com/auth/login",
       },
     },
   ],
+};
 };

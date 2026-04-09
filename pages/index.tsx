@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 
         <FeaturesSection />
 
-        {/* <PricingSection /> */}
+        <PricingSection />
 
         {/* <FaqSection /> */}
       </Box>
