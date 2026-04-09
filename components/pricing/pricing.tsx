@@ -1,5 +1,7 @@
 import {
   Box,
+  Button,
+  ButtonGroup,
   Heading,
   HStack,
   Icon,
@@ -7,6 +9,7 @@ import {
   StackProps,
   Text,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   ButtonLink,
@@ -14,7 +17,7 @@ import {
 } from "components/button-link/button-link";
 import { BackgroundGradient } from "components/gradients/background-gradient";
 import { Section, SectionProps, SectionTitle } from "components/section";
-import React from "react";
+import React, { useState } from "react";
 import { FiCheck } from "react-icons/fi";
 
 export interface PricingPlan {
@@ -27,13 +30,26 @@ export interface PricingPlan {
   isRecommended?: boolean;
 }
 
-export interface PricingProps extends SectionProps {
-  description: React.ReactNode;
+export interface PricingTab {
+  label: string;
   plans: Array<PricingPlan>;
 }
 
+export interface PricingProps extends SectionProps {
+  description: React.ReactNode;
+  plans: Array<PricingPlan>;
+  tabs?: Array<PricingTab>;
+}
+
 export const Pricing: React.FC<PricingProps> = (props) => {
-  const { children, plans, title, description, ...rest } = props;
+  const { children, plans, tabs, title, description, ...rest } = props;
+  const [activeTab, setActiveTab] = useState(0);
+  const activeBg = useColorModeValue("primary.500", "primary.500");
+  const inactiveBg = useColorModeValue("gray.100", "whiteAlpha.200");
+  const activeColor = useColorModeValue("white", "white");
+  const inactiveColor = useColorModeValue("gray.600", "gray.400");
+
+  const displayPlans = tabs ? tabs[activeTab]?.plans || [] : plans;
 
   return (
     <Section id="pricing" pos="relative" {...rest}>
@@ -41,8 +57,33 @@ export const Pricing: React.FC<PricingProps> = (props) => {
       <Box zIndex="2" pos="relative">
         <SectionTitle title={title} description={description}></SectionTitle>
 
-        <SimpleGrid columns={[1, null, 3]} spacing={4}>
-          {plans?.map((plan) => (
+        {tabs && (
+          <HStack justify="center" mb="8" flexWrap="wrap" spacing="2">
+            {tabs.map((tab, i) => (
+              <Button
+                key={tab.label}
+                size="md"
+                fontWeight="semibold"
+                bg={activeTab === i ? activeBg : inactiveBg}
+                color={activeTab === i ? activeColor : inactiveColor}
+                _hover={{
+                  bg: activeTab === i ? activeBg : "gray.200",
+                  _dark: {
+                    bg: activeTab === i ? activeBg : "whiteAlpha.300",
+                  },
+                }}
+                onClick={() => setActiveTab(i)}
+                borderRadius="full"
+                px="6"
+              >
+                {tab.label}
+              </Button>
+            ))}
+          </HStack>
+        )}
+
+        <SimpleGrid columns={[1, null, Math.min(displayPlans.length, 3)]} spacing={4}>
+          {displayPlans?.map((plan) => (
             <PricingBox
               key={plan.id}
               title={plan.title}
