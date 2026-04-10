@@ -42,7 +42,7 @@ const allConfiguredPlans = [
     id: "pro_full",
     title: "Pro Full",
     description: "Zero config — we provide the API keys.",
-    price: "119€/month",
+    price: "238€/month",
     features: [
       { title: "30 scans per month" },
       { title: "No API keys needed" },
@@ -60,7 +60,7 @@ const allConfiguredPlans = [
     id: "pro_full_plus",
     title: "Pro Full+",
     description: "High-volume scanning, zero config.",
-    price: "399€/month",
+    price: "798€/month",
     isRecommended: true,
     features: [
       { title: "150 scans per month" },
@@ -78,12 +78,12 @@ const allConfiguredPlans = [
   },
 ];
 
-const qualityPlans = [
+const allConfiguredQualityPlans = [
   {
     id: "pro_full_quality",
     title: "Pro Full Quality",
     description: "Best models and configuration for maximum accuracy.",
-    price: "499€/month",
+    price: "998€/month",
     features: [
       { title: "30 scans per month" },
       { title: "No API keys needed" },
@@ -101,7 +101,7 @@ const qualityPlans = [
     id: "pro_full_plus_quality",
     title: "Pro Full+ Quality",
     description: "Maximum volume with premium models.",
-    price: "1599€/month",
+    price: "3198€/month",
     isRecommended: true,
     features: [
       { title: "150 scans per month" },
@@ -112,6 +112,28 @@ const qualityPlans = [
       { title: "Repository Graph View" },
       { title: "PR & commit monitoring" },
       { title: "Priority support" },
+    ],
+    action: {
+      href: "https://dashboard.naxusai.com/auth/login",
+    },
+  },
+];
+
+const payPerVulnPlan = [
+  {
+    id: "pay_per_vuln",
+    title: "Pay Per Vuln",
+    description: "Deposit funds, launch scans, pay only for what you unlock.",
+    price: "From 100€",
+    isRecommended: true,
+    features: [
+      { title: "1 scan per 100€ deposited" },
+      { title: "No API keys needed — we provide them" },
+      { title: "View vulnerabilities table for free" },
+      { title: "Pay per vulnerability detail unlocked" },
+      { title: "Public & Private Repos" },
+      { title: "Info/Low: 50€ · Medium: 150€" },
+      { title: "High: 300€ · Critical: 500€" },
     ],
     action: {
       href: "https://dashboard.naxusai.com/auth/login",
@@ -148,7 +170,8 @@ export default {
   tabs: [
     { label: "Use Your Own Keys", plans: ownKeysPlans },
     { label: "All Configured", plans: allConfiguredPlans },
-    { label: "Quality", plans: qualityPlans },
+    { label: "All Configured Quality", plans: allConfiguredQualityPlans },
+    { label: "Pay Per Vuln", plans: payPerVulnPlan },
     { label: "Enterprise", plans: enterprisePlan },
   ],
   // Flat list for backward compat
