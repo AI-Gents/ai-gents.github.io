@@ -46,6 +46,10 @@ const siteConfig = {
         label: "Contact",
       },
       {
+        href: "https://discord.com/invite/NC9XxWvcjX",
+        label: "Discord",
+      },
+      {
         href: "https://docs.naxusai.com/privacy-policy",
         label: "Privacy",
       },

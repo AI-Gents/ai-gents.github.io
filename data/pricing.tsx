@@ -1,4 +1,4 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
 
 const ownKeysPlans = [
   {
@@ -190,7 +190,7 @@ const enterprisePlan = [
 export default {
   title: "Pricing for every stage",
   description:
-    "From free scans with your own keys, to fully managed plans, to pay-per-vulnerability — pick what fits your workflow.",
+    "From free scans with your own keys, to fully managed plans, to pay-per-vulnerability — pick what fits your workflow. For private LLM deployments hosted by Naxus or by your organization, contact us directly.",
   tabs: [
     { label: "Use Your Own Keys", plans: ownKeysPlans },
     { label: "All Configured", plans: allConfiguredPlans },
@@ -198,6 +198,20 @@ export default {
     { label: "Pay Per Vuln", plans: payPerVulnPlan },
     { label: "Enterprise", plans: enterprisePlan },
   ],
+  children: (
+    <Text p="8" textAlign="center" color="muted">
+      Private LLM deployments are arranged directly with Naxus and are not self-serve on the
+      standard plans. Contact us at{" "}
+      <Link href="mailto:info@naxusai.com" color="primary.500">
+        info@naxusai.com
+      </Link>{" "}
+      or join{" "}
+      <Link href="https://discord.com/invite/NC9XxWvcjX" isExternal color="primary.500">
+        our Discord
+      </Link>
+      .
+    </Text>
+  ),
   // Flat list for backward compat
   plans: [...ownKeysPlans, ...allConfiguredPlans],
 };
