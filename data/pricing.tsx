@@ -9,7 +9,6 @@ const ownKeysPlans = [
     features: [
       { title: "5 security scans (total)" },
       { title: "Use your own API keys" },
-      { title: "Monitor up to 5 repositories" },
       { title: "Access to Public Repos only" },
     ],
     action: {
