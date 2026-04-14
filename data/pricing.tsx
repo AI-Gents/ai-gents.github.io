@@ -17,6 +17,24 @@ const ownKeysPlans = [
     },
   },
   {
+    id: "startup",
+    title: "Startup",
+    description: "Affordable continuous scanning with your own API keys.",
+    price: "19€/month",
+    features: [
+      { title: "10 scans per month" },
+      { title: "Use your own API keys" },
+      { title: "Monitor up to 10 repositories" },
+      { title: "Public & Private Repos" },
+      { title: "Repository Graph View" },
+      { title: "PR & commit monitoring" },
+      { title: "Full context analysis" },
+    ],
+    action: {
+      href: "https://dashboard.naxusai.com/auth/login",
+    },
+  },
+  {
     id: "pro",
     title: "Pro",
     description: "Full-featured scanning with your own keys.",
