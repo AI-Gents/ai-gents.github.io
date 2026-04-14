@@ -8,7 +8,8 @@ const ownKeysPlans = [
     price: "Free",
     features: [
       { title: "5 security scans (total)" },
-      { title: "Use your own API keys" },
+      { title: "Use your own provider API keys" },
+      { title: "No Naxus API keys" },
       { title: "Access to Public Repos only" },
       { title: "ZIP uploads unavailable on Free" },
       { title: "No PR & commit monitoring" },
@@ -24,7 +25,8 @@ const ownKeysPlans = [
     price: "19€/month",
     features: [
       { title: "10 scans per month" },
-      { title: "Use your own API keys" },
+      { title: "Use your own provider API keys" },
+      { title: "No Naxus API keys" },
       { title: "Monitor up to 10 repositories" },
       { title: "Public & Private Repos" },
       { title: "Repository Graph View" },
@@ -43,7 +45,8 @@ const ownKeysPlans = [
     isRecommended: true,
     features: [
       { title: "100 scans per month" },
-      { title: "Use your own API keys" },
+      { title: "Use your own provider API keys" },
+      { title: "Naxus API keys available" },
       { title: "Monitor up to 50 repositories" },
       { title: "Public & Private Repos" },
       { title: "Repository Graph View" },
@@ -142,12 +145,13 @@ const payPerVulnPlan = [
   {
     id: "pay_per_vuln",
     title: "Pay Per Vuln",
-    description: "Bring your own API keys, launch scans, and pay only for the findings you unlock.",
+    description: "Bring your own provider API keys, launch scans, and pay only for the findings you unlock.",
     price: "From 100€",
     isRecommended: true,
     features: [
       { title: "1 scan per 100€ deposited" },
-      { title: "Use your own API keys" },
+      { title: "Use your own provider API keys" },
+      { title: "No Naxus API keys" },
       { title: "View vulnerabilities table for free" },
       { title: "Pay per vulnerability detail unlocked" },
       { title: "Public & Private Repos" },
