@@ -1,16 +1,19 @@
 import { Link, Text } from "@chakra-ui/react";
 
+const FREE_PLAN_RETENTION_DAYS = 14;
+
 const ownKeysPlans = [
   {
     id: "free",
     title: "Free",
-    description: "Get started with your own API keys.",
+    description: `Get started with your own API keys and a ${FREE_PLAN_RETENTION_DAYS}-day repository retention window.`,
     price: "Free",
     features: [
       { title: "5 security scans (total)" },
       { title: "Use your own provider API keys" },
       { title: "No Naxus API keys" },
       { title: "Access to Public Repos only" },
+      { title: `Repositories and derived findings deleted after ${FREE_PLAN_RETENTION_DAYS} days` },
       { title: "ZIP uploads unavailable on Free" },
       { title: "No PR & commit monitoring" },
     ],
@@ -190,7 +193,7 @@ const enterprisePlan = [
 export default {
   title: "Pricing for every stage",
   description:
-    "From free scans with your own keys, to fully managed plans, to pay-per-vulnerability — pick what fits your workflow. For private LLM deployments hosted by Naxus or by your organization, contact us directly.",
+    `From free scans with your own keys and a ${FREE_PLAN_RETENTION_DAYS}-day repository retention window, to fully managed plans, to pay-per-vulnerability — pick what fits your workflow. For private LLM deployments hosted by Naxus or by your organization, contact us directly.`,
   tabs: [
     { label: "Use Your Own Keys", plans: ownKeysPlans },
     { label: "All Configured", plans: allConfiguredPlans },
@@ -201,7 +204,8 @@ export default {
   children: (
     <Text p="8" textAlign="center" color="muted">
       Private LLM deployments are arranged directly with Naxus and are not self-serve on the
-      standard plans. Contact us at{" "}
+      standard plans. Free-plan repositories are deleted after {FREE_PLAN_RETENTION_DAYS} days
+      unless you upgrade. Contact us at{" "}
       <Link href="mailto:info@naxusai.com" color="primary.500">
         info@naxusai.com
       </Link>{" "}

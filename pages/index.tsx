@@ -334,7 +334,7 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: "Start monitoring for free!",
+        title: "Start free for 14 days, then upgrade to keep your repos.",
         href: "https://dashboard.naxusai.com/auth/login",
         action: false,
       },
