@@ -17,7 +17,7 @@ import { Typer } from "components/typer/typer";
 
 import { FallInPlace } from "components/motion/fall-in-place";
 import { Hero } from "components/hero";
-import { Link, Br } from "@saas-ui/react";
+import { Br } from "@saas-ui/react";
 import {
   FiArrowRight,
   FiCode,
@@ -29,13 +29,8 @@ import {
 } from "react-icons/fi";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
-import { Faq } from "components/faq";
-import { Pricing } from "components/pricing/pricing";
 
 import { ButtonLink } from "components/button-link/button-link";
-
-import faq from "data/faq";
-import pricing from "data/pricing";
 
 import { Highlights, HighlightsItem } from "components/highlights";
 
@@ -43,8 +38,8 @@ const Home: NextPage = () => {
   return (
     <Box>
       <SEO
-        title="Naxus - The EDR of your source code"
-        description="Smart monitoring for your source code."
+        title="Naxus - Offensive AI for code and infrastructure"
+        description="Mythos-style autonomous security testing that finds zero-days in code and infrastructure with static and dynamic validation."
       />
       <Box>
         <HeroSection />
@@ -52,10 +47,6 @@ const Home: NextPage = () => {
         <HighlightsSection />
 
         <FeaturesSection />
-
-        <PricingSection />
-
-        {/* <FaqSection /> */}
       </Box>
     </Box>
   );
@@ -73,8 +64,8 @@ const HeroSection: React.FC = () => {
             px={{ base: 0, lg: 10 }}
             title={
               <FallInPlace>
-                Find your vulnerabilities, <Br />
-                before they
+                Find zero-days in your code <Br />
+                and infrastructure before they
               </FallInPlace>
             }
             title_typed={
@@ -84,9 +75,10 @@ const HeroSection: React.FC = () => {
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Naxus safeguards your code from vulnerabilities, so you can
-                focus on building exceptional software. Don&apos;t let any
-                vulnerability reach production!
+                Naxus delivers Mythos-style autonomous offensive security at a
+                more accessible cost: static and dynamic AI agents hunt real
+                vulnerabilities, validate exploitability, and surface zero-days
+                with zero false-positive noise.
               </FallInPlace>
             }
           >
@@ -111,7 +103,7 @@ const HeroSection: React.FC = () => {
                       />
                     }
                   >
-                    Join now!
+                    Launch a scan
                   </ButtonLink>
                 </ButtonGroup>
               </FallInPlace>
@@ -169,13 +161,12 @@ const HighlightsSection = () => {
         >
           <VStack alignItems="flex-start" spacing="8">
             <Text color="muted" fontSize="xl">
-              We go beyond simple detection. Naxus automates the entire
-              vulnerability lifecycle, from identification to resolution, with
-              deep insight into exposed assets and proof-of-concept exploits.
-              Our system minimizes false positives by validating real
-              exploitability, while also guiding you with precise remediation
-              suggestions. Stay secure effortlessly as every step of the process
-              is handled with intelligence and precision.
+              Naxus goes beyond passive scanning. It runs an offensive
+              vulnerability lifecycle across code and infrastructure, from
+              attack-surface discovery to exploitability validation and
+              remediation guidance. The goal is simple: report only issues that
+              matter, including previously unknown zero-days, with dynamic
+              proof that keeps false positives out of your workflow.
             </Text>
           </VStack>
         </HighlightsItem>
@@ -199,25 +190,25 @@ const HighlightsSection = () => {
             priority
           />
         </Box>
-        <HighlightsItem colSpan={[1, null, 2]} title="Attack Path Discovery ">
+        <HighlightsItem colSpan={[1, null, 2]} title="Offensive Attack Path Discovery ">
           <Text color="muted" fontSize="lg">
-            See your code’s vulnerabilities the way an attacker would. Naxus
-            maps attack paths across complex code flows and interdependent
-            components, tracing weaknesses through the intricate web of your
-            software. This full-spectrum visibility empowers your team to make
-            proactive, data-driven security decisions before issues become
-            breaches.
+            See your systems the way an attacker would. Naxus maps attack paths
+            across repositories, services, exposed assets, dependencies, and
+            infrastructure logic, then pushes deeper to find the bugs that
+            normal SAST and cloud posture tools miss. It is built for teams that
+            want autonomous offensive testing in the Mythos category, but at a
+            more economical price point.
           </Text>
         </HighlightsItem>
 
-        <HighlightsItem colSpan={[1, null, 2]} title="Context-Aware Detection ">
+        <HighlightsItem colSpan={[1, null, 2]} title="Static + Dynamic Validation ">
           <Text color="muted" fontSize="lg">
-            Not all vulnerabilities are equal. Naxus performs deep contextual
-            analysis of your codebase (understanding relationships, behavior,
-            and intent) to detect sophisticated issues that span multiple files
-            or layers. By reducing false positives and surfacing what truly
-            matters, we make vulnerability detection smarter, faster, and far
-            more effective.
+            Naxus combines static code analysis with dynamic execution and
+            agent-based verification. It understands relationships, behavior,
+            reachable flows, and infrastructure context, then validates whether
+            a finding can actually be exploited. More signal, more zero-days,
+            and a zero false-positive standard before a vulnerability reaches
+            your team.
           </Text>
         </HighlightsItem>
         <Box display={{ base: "none", lg: "block" }} p="0" m="auto">
@@ -245,14 +236,14 @@ const FeaturesSection = () => {
           textAlign="left"
           as="p"
         >
-          More than a monitoring solution
+          More offensive than a monitoring solution
         </Heading>
       }
       description={
         <>
-          Elevate your code security practices and streamline your development
-          workflow to meet the demands of today&apos;s software development
-          landscape.
+          Naxus brings autonomous offensive AI into your development and
+          infrastructure workflow, finding exploitable vulnerabilities and
+          zero-days before attackers do.
         </>
       }
       align="left"
@@ -260,10 +251,10 @@ const FeaturesSection = () => {
       iconSize={6}
       features={[
         {
-          title: "Real-time.",
+          title: "Offensive scanning.",
           icon: FiTerminal,
           description:
-            "Instantly detects and reports security weaknesses as code is committed, providing immediate feedback to developers.",
+            "Continuously hunts exploitable weaknesses across code, dependencies, services, and infrastructure instead of stopping at passive alerts.",
           variant: "inline",
         },
         // {
@@ -274,58 +265,44 @@ const FeaturesSection = () => {
         //   variant: "inline",
         // },
         {
-          title: "Historical data.",
+          title: "Zero-day discovery.",
           icon: FiTrendingUp,
           description:
-            "Maintains a historical record of vulnerabilities, aiding in trend analysis and demonstrating security improvements over time.",
+            "Looks for previously unknown vulnerabilities with deep contextual reasoning, attack-path analysis, and exploitability checks.",
           variant: "inline",
         },
         {
-          title: "User-friendly.",
+          title: "Zero false-positive focus.",
           icon: FiUserCheck,
           description:
-            "Features an intuitive, user-friendly interface designed to make vulnerability management accessible to all team members.",
+            "Uses static and dynamic validation to prove real impact before findings are reported, keeping your team focused on exploitable risk.",
           variant: "inline",
         },
         {
           title: "GitHub Integration.",
           icon: FiGithub,
           description:
-            "Seamlessly integrates with GitHub to make it easy for teams to incorporate security checks into their existing development workflows.",
+            "Seamlessly integrates with GitHub so offensive security checks can run directly inside existing development workflows.",
           variant: "inline",
         },
         {
-          title: "Agent-ready.",
+          title: "Autonomous agents.",
           icon: FiEye,
           description:
-            "Autonomous AI agents independently verify detected vulnerabilities, validating exploitability and prioritizing real risks with precision, so your team stays focused without the noise of false positives.",
+            "AI agents independently explore, verify, and prioritize vulnerabilities, bringing Mythos-style offensive automation to code and infrastructure.",
           variant: "inline",
         },
 
         {
-          title: "Contextual Analysis Levels.",
+          title: "Economical alternative.",
           icon: FiCode,
           description:
-            "Multiple levels of contextual analysis, allowing teams to customize the depth of code scrutiny according to their specific requirements.",
+            "Delivers the kind of autonomous zero-day hunting associated with Mythos, packaged for teams that need a more affordable path to real findings.",
           variant: "inline",
         },
       ]}
     />
   );
-};
-
-const PricingSection = () => {
-  return (
-    <Pricing {...pricing}>
-      {/* <Text p="8" textAlign="center" color="muted">
-        VAT may be applicable depending on your location.
-      </Text> */}
-    </Pricing>
-  );
-};
-
-const FaqSection = () => {
-  return <Faq {...faq} />;
 };
 
 export default Home;
@@ -334,7 +311,7 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: "Start free for 14 days, then upgrade to keep your repos.",
+        title: "Autonomous offensive AI for finding zero-days in code and infrastructure.",
         href: "https://dashboard.naxusai.com/auth/login",
         action: false,
       },
