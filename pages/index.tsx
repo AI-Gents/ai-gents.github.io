@@ -269,7 +269,7 @@ const FeaturesSection = () => {
       iconSize={6}
       features={[
         {
-          title: "Offensive scanning.",
+          title: "Offensive static $ dynamic scanning.",
           icon: FiTerminal,
           description:
             "Continuously hunts exploitable weaknesses across code, dependencies, services, and infrastructure instead of stopping at passive alerts.",
