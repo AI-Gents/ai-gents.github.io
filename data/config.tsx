@@ -1,7 +1,4 @@
-import { Button } from "@chakra-ui/react";
-import { Link } from "@saas-ui/react";
 import { NextSeoProps } from "next-seo";
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FiCheck } from "react-icons/fi";
 import { Logo } from "./logo";
 
@@ -9,7 +6,7 @@ const siteConfig = {
   logo: Logo,
   seo: {
     title: "Naxus",
-    description: "The EDR of your source code",
+    description: "Offensive AI for finding zero-days in code and infrastructure",
   } as NextSeoProps,
   termsUrl: "#",
   privacyUrl: "https://docs.naxusai.com/privacy-policy",
@@ -19,10 +16,6 @@ const siteConfig = {
         id: "features",
         label: "Features",
       },
-      // {
-      //   id: "pricing",
-      //   label: "Pricing",
-      // },
       // {
       //   id: "faq",
       //   label: "FAQ",
