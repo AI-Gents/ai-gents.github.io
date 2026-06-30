@@ -25,6 +25,10 @@ const siteConfig = {
         href: "https://docs.naxusai.com/",
       },
       {
+        id: "contact",
+        label: "Contact",
+      },
+      {
         label: "Login",
         href: "https://dashboard.naxusai.com/auth/login",
         variant: "primary",

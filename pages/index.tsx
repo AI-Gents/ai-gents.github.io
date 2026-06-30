@@ -6,11 +6,18 @@ import {
   Box,
   Stack,
   ButtonGroup,
+  Button,
   Icon,
   Heading,
   Text,
   VStack,
   Flex,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+  Link,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
 import { Typer } from "components/typer/typer";
@@ -26,6 +33,7 @@ import {
   FiTrendingUp,
   FiEye,
   FiUserCheck,
+  FiMail,
 } from "react-icons/fi";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
@@ -47,6 +55,8 @@ const Home: NextPage = () => {
         <HighlightsSection />
 
         <FeaturesSection />
+
+        <ContactSection />
       </Box>
     </Box>
   );
@@ -104,6 +114,14 @@ const HeroSection: React.FC = () => {
                     }
                   >
                     Launch a scan
+                  </ButtonLink>
+                  <ButtonLink
+                    size="lg"
+                    href="#contact"
+                    colorScheme="primary"
+                    leftIcon={<Icon as={FiMail} />}
+                  >
+                    Contact us
                   </ButtonLink>
                 </ButtonGroup>
               </FallInPlace>
@@ -302,6 +320,123 @@ const FeaturesSection = () => {
         },
       ]}
     />
+  );
+};
+
+const ContactSection = () => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [company, setCompany] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const subject = encodeURIComponent("Naxus contact request");
+    const body = encodeURIComponent(
+      [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Company: ${company || "-"}`,
+        "",
+        "Message:",
+        message,
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:info@naxusai.com?subject=${subject}&body=${body}`;
+  };
+
+  return (
+    <Box id="contact" py={{ base: 20, lg: 28 }} bg="gray.900" color="white">
+      <Container maxW="container.lg">
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 10, lg: 16 }}>
+          <Stack spacing="6" justifyContent="center">
+            <Heading
+              as="h2"
+              lineHeight="short"
+              fontSize={["2xl", null, "4xl"]}
+            >
+              Talk to Naxus
+            </Heading>
+            <Text color="gray.300" fontSize="xl">
+              Send us your repository, infrastructure scope, or offensive
+              security goals and we will help you launch a zero-day hunting
+              workflow.
+            </Text>
+            <Text color="gray.400" fontSize="lg">
+              Prefer direct email?{" "}
+              <Link href="mailto:info@naxusai.com" color="primary.300">
+                info@naxusai.com
+              </Link>
+            </Text>
+          </Stack>
+
+          <Box
+            as="form"
+            onSubmit={onSubmit}
+            border="1px solid"
+            borderColor="whiteAlpha.200"
+            borderRadius="md"
+            p={{ base: 5, md: 8 }}
+            bg="blackAlpha.300"
+          >
+            <Stack spacing="5">
+              <FormControl isRequired>
+                <FormLabel>Name</FormLabel>
+                <Input
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  placeholder="Your name"
+                  bg="whiteAlpha.100"
+                  borderColor="whiteAlpha.300"
+                />
+              </FormControl>
+              <FormControl isRequired>
+                <FormLabel>Email</FormLabel>
+                <Input
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="you@company.com"
+                  bg="whiteAlpha.100"
+                  borderColor="whiteAlpha.300"
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Company</FormLabel>
+                <Input
+                  value={company}
+                  onChange={(event) => setCompany(event.target.value)}
+                  placeholder="Company name"
+                  bg="whiteAlpha.100"
+                  borderColor="whiteAlpha.300"
+                />
+              </FormControl>
+              <FormControl isRequired>
+                <FormLabel>What do you want to test?</FormLabel>
+                <Textarea
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  placeholder="Codebase, infrastructure, exposed services, or a specific target scope."
+                  minH="140px"
+                  bg="whiteAlpha.100"
+                  borderColor="whiteAlpha.300"
+                />
+              </FormControl>
+              <Button
+                type="submit"
+                colorScheme="primary"
+                size="lg"
+                rightIcon={<Icon as={FiArrowRight} />}
+              >
+                Send message
+              </Button>
+            </Stack>
+          </Box>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 };
 
