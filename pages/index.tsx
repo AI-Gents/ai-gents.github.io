@@ -167,7 +167,7 @@ const Home: NextPage = () => {
           <section className="nx-section nx-evidence" id="evidence">
             <div className="nx-section-heading nx-centered">
               <p className="nx-kicker">Evidence, not black boxes</p>
-              <h2>Don't trust blind agents, Know exactly what was tested.</h2>
+              <h2>Don&apos;t trust blind agents, Know exactly what was tested.</h2>
               <p className="nx-section-subtitle">
                 Naxus never fires blind. Every agent run is grounded in a code
                 graph and a clear record of what it checked so you know the covering of the scan.
