@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import { SEO } from "components/seo/seo";
 import { Typer } from "components/typer/typer";
 
@@ -85,7 +86,7 @@ const Home: NextPage = () => {
       <div className="nx-page">
         <header className="nx-nav" aria-label="Main navigation">
           <a className="nx-brand" href="#home" aria-label="Naxus home">
-            <span className="nx-brand-mark" />
+            <Image className="nx-brand-logo" src="/static/images/logo.png" alt="" width={32} height={32} />
             <span>NAXUS</span>
           </a>
           <nav className="nx-nav-links">
@@ -284,7 +285,7 @@ const Home: NextPage = () => {
 
         <footer className="nx-footer">
           <a className="nx-brand" href="#home" aria-label="Naxus home">
-            <span className="nx-brand-mark" />
+            <Image className="nx-brand-logo" src="/static/images/logo.png" alt="" width={32} height={32} />
             <span>NAXUS</span>
           </a>
           <span>© 2026</span>
@@ -364,13 +365,12 @@ const Home: NextPage = () => {
           white-space: nowrap;
         }
 
-        .nx-brand-mark {
-          width: 13px;
-          height: 13px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, var(--cyan), var(--red));
-          box-shadow: 0 0 16px rgba(58, 160, 255, 0.95);
+        .nx-brand-logo {
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
           flex: 0 0 auto;
+          filter: drop-shadow(0 0 14px rgba(58, 160, 255, 0.5));
         }
 
         .nx-nav-links,
