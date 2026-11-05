@@ -20,3 +20,9 @@ email as Reply-To. Failed submissions retain the form and reset the CAPTCHA.
 Run `npm ci`, `npm run build`, then `npx --no-install next export`. Preview
 `out/` using a static HTTP server and check `/` and `/request-access/` at both
 mobile and desktop widths. The push to `main` deploys through GitHub Pages.
+
+### CI dependency reuse
+
+Installed dependencies are cached by exact OS, architecture, Node version and
+package/lockfile hashes. Cache misses still use `npm ci`; every deployment builds
+and statically exports the site. Root documentation-only pushes skip deployment.

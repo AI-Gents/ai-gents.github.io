@@ -8,6 +8,11 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths-ignore:
+      - "README.md"
+      - "AGENTS.md"
+      - "LICENSE*"
+      - ".gitignore"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -49,6 +54,7 @@ jobs:
             exit 1
           fi
       - name: Setup Node
+        id: node
         uses: actions/setup-node@v4
         with:
           node-version: "18"
@@ -67,8 +73,17 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+      - name: Restore installed dependencies
+        id: dependencies
+        uses: actions/cache@v5
+        with:
+          path: node_modules
+          key: modules-v1-${{ runner.os }}-${{ runner.arch }}-node-${{ steps.node.outputs.node-version }}-${{ hashFiles('package-lock.json', 'package.json', '.npmrc') }}
+
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        if: steps.dependencies.outputs.cache-hit != 'true'
+        run: npm ci --prefer-offline --no-fund
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
