@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" viewBox="0 0 140 32" aria-label="Naxus">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#4BF0C0" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <polygon points="16,3 29,16 16,29 3,16" fill="#020504" stroke="#4BF0C0" stroke-width="2.4" stroke-linejoin="miter" filter="url(#glow)"/>
+  <text x="44" y="21" fill="#E6ECF4" font-family="'Geist Mono', ui-monospace, monospace" font-weight="500" font-size="14" letter-spacing="3.92">NAXUS</text>
+</svg>

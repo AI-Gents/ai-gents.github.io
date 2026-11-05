@@ -3,6 +3,8 @@ import { withContentlayer } from 'next-contentlayer'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: true,
+  images: { unoptimized: true },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

@@ -1,6 +1,6 @@
 {
-  "short_name": "NAXUS",
-  "name": "NAXUS",
+  "short_name": "Naxus",
+  "name": "Naxus",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#4BF0C0",
+  "background_color": "#06080c"
 }
