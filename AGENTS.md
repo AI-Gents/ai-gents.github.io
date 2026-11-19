@@ -6,3 +6,7 @@
 - **Create only needed branches.** Check `git status` and worktrees first. Use one short-lived branch per change, reuse it for revisions, and preserve others' work. Avoid speculative or duplicate branches.
 - **Clean up after a verified merge.** Confirm the changes landed, including after squash/rebase, and that no open PR or unmerged work needs the branch. Delete only your completed task's remote/local branch and worktree; prune stale refs. Never delete default, protected, shared, or unrelated branches.
 - **Leave a clean environment.** Check for leftover branches, worktrees, and uncommitted changes. Clean up safely or explain what must remain; never merge or delete when authorization or safety is uncertain.
+
+## Agent prompts
+
+- **Keep agent identities platform-neutral.** Model-facing instructions must describe only the agent's task, scope, tools and output; never tell an agent that it belongs to, works for, or represents Naxus, AI-Gents or any other company, product or platform. Apply this to system/user prompts, shared fragments, injected guidance and launcher-built text, and review the final rendered prompt. Keep names only when needed to use a tool, locate a resource or describe the target; they must not imply agent affiliation.
